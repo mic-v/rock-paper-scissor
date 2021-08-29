@@ -3,12 +3,39 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>RPS</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src="main.js"></script>
 </head>
 <body>
-    test2
+    <header class="site-header">
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <main class="site-container" id="main-section">
+        <section id="rps-section">
+            <h2>Choose your weapon</h2>
+            <form id="rps-buttons">
+                <button value="Rock" class="rps-button" id="rps-rock" onclick="">
+                    <img src="images/rock.jpg">
+                    <h6>Rock</h6>
+                </button>   
+                <button value="Paper" class="rps-button" id="rps-paper" onclick="">
+                    <img src="images/scissors.svg">
+                    <h6>Paper</h6>
+                </button> 
+                <button value="Scissors" class="rps-button" id="rps-scissors" onclick="">
+                    <img src="images/paper.jpg">
+                    <h6>Scissors</h6>
+                </button> 
+            </form>
+        </section>
+        <section class="rps-stats">
+            Text
+        </section>
+    </main>
+    <footer class="site-container footer" >
+        <p>Copyright 2021: Michael Victorino</p>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
