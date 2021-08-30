@@ -14,27 +14,33 @@
     <main class="site-container" id="main-section">
         <section id="rps-section">
             <h2>Choose your weapon</h2>
-            <form id="rps-buttons">
-                <button value="Rock" class="rps-button" id="rps-rock" onclick="">
+            <form id="rps-buttons" onsubmit="return false">
+                <button value="Rock" class="rps-button" id="rps-rock">
                     <img src="images/rock.jpg">
                     <h6>Rock</h6>
                 </button>   
-                <button value="Paper" class="rps-button" id="rps-paper" onclick="">
+                <button value="Paper" class="rps-button" id="rps-paper">
                     <img src="images/scissors.svg">
                     <h6>Paper</h6>
                 </button> 
-                <button value="Scissors" class="rps-button" id="rps-scissors" onclick="">
+                <button value="Scissors" class="rps-button" id="rps-scissors">
                     <img src="images/paper.jpg">
                     <h6>Scissors</h6>
                 </button> 
             </form>
         </section>
-        <section class="rps-stats">
-            Text
+        <section id="rps-stats">
+            <p id="results">Awaiting Input</p>
+            <ul id="game-stats">
+                <li>Wins: <p id="wins">0</p></li>
+                <li>Losses: <p id="loss">0</p></li>
+                <li>Ties:  <p id="ties">0</p></li>
+                <li>Total Games: <p id="total">0</p></li>
+            </ul>
         </section>
     </main>
     <footer class="site-container footer" >
-        <p>Copyright 2021: Michael Victorino</p>
+        <p>Copyright 2021: Michael Victorino. Images taken from icon-library.com</p>
     </footer>
     <script src="main.js"></script>
 </body>

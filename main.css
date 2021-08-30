@@ -32,16 +32,61 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
 }
 
 .rps-button {
     margin-left: 10px;
     margin-right: 10px;
     padding: 0.1em;
+
+    border: 1px solid  rgb(233, 233, 233);
+    border-radius: 0.25em;
+    background-color:rgb(233, 233, 233);
+
+    transition: all 0.1s ease-in;
+}
+
+.rps-button:hover {
+    background-color:rgb(226, 226, 226);
+}
+
+.rps-button:active {
+    border-color:rgb(104, 104, 104);
+    background-color:rgb(226, 226, 226);
 }
 
 .rps-button > img {
     width: 150px;
+}
+
+
+#rps-stats {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color:rgb(233, 233, 233);
+    border: 1px solid (233, 233, 233);
+    border-radius: 0.25em;
+    box-shadow: inset 0 0 5px (233, 233, 233);
+}
+
+#rps-stats > * {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 10px 0px;
+}
+
+
+#game-stats {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#game-stats > li {
+    margin: 0em 1.5em;
 }
 
 .footer {
@@ -51,5 +96,8 @@
     margin: 0 auto;
 }
 
+
+
 .footer > p {
+    text-align: center;
 }
