@@ -98,3 +98,50 @@ function playRound(playerSelection, computerSelection) {
     }
     return false;
 }
+
+function darkMode() {
+    let sliderOn = document.getElementById("sliderCheck");
+    if(sliderOn.checked == true) {  
+        document.getElementsByTagName("body")[0].style = "background-color: rgb(20,20,20)";
+        document.getElementById("main-section").style = "background-color: rgb(40,40,40)";
+        document.getElementById("site-header").style = "background-color: rgb(60,60,60)";
+        document.getElementById("rps-stats").style = "background-color: rgb(100,100,100)";
+        document.getElementById("site-header").style.color = "rgb(255,255,255)";
+        document.getElementById("main-section").style.color = "rgb(255,255,255)";
+        let rpsButtons = document.querySelectorAll(".rps-button");
+        for(let i = 0; i < rpsButtons.length; i++) {
+            rpsButtons[i].style = "background-color: rgb(100,100,100)";
+        }
+
+        let h6Elements = document.getElementsByTagName("h6");
+        for(let i = 0; i < h6Elements.length; i++) {
+            h6Elements[i].style.color = "#fff";
+        }
+
+        document.getElementsByClassName("footer")[0].style.color = "#fff";
+        document.getElementsByClassName("footer")[0].style.backgroundColor = "#3c3c3c";
+        
+    }
+    else {
+        document.getElementsByTagName("body")[0].style = "background-color: #ffffff";
+        document.getElementsByTagName("body")[0].style.backgroundColor = "";
+        document.getElementById("main-section").style.backgroundColor = "";
+        document.getElementById("site-header").style.backgroundColor = "";
+        document.getElementById("site-header").style.color = "";
+        document.getElementById("rps-stats").style = "";
+        document.getElementById("main-section").style.color = "";
+
+        let rpsButtons = document.getElementsByClassName("rps-button");
+        for(let i = 0; i < rpsButtons.length; i++) {
+            rpsButtons[i].style = "";
+        }
+
+        let h6Elements = document.getElementsByTagName("h6");
+        for(let i = 0; i < h6Elements.length; i++) {
+            h6Elements[i].style.color = "";
+        }
+
+        document.getElementsByClassName("footer")[0].style.color = "";
+        document.getElementsByClassName("footer")[0].style.backgroundColor = "";
+    }
+}

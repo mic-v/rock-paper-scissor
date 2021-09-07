@@ -8,8 +8,12 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
-    <header class="site-header">
+    <header id="site-header" class="site-container">
         <h1>Rock Paper Scissors</h1>
+        <label class="switch">
+            <input type="checkbox" id="sliderCheck" onclick="darkMode()">
+            <div class="slider round"></div>
+        </label>
     </header>
     <main class="site-container" id="main-section">
         <section id="rps-section">
@@ -39,7 +43,7 @@
             </ul>
         </section>
     </main>
-    <footer class="site-container footer" >
+    <footer class="footer site-container" >
         <p>Copyright 2021: Michael Victorino. Images taken from icon-library.com</p>
     </footer>
     <script src="main.js"></script>

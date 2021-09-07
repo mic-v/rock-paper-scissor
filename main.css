@@ -5,18 +5,116 @@
     box-sizing: border-box;
 }
 
-.site-header {
-    width: 100%;
-    margin: 1em auto;
-
-    text-align: center;
+html, body {
+    height: 100%;
 }
 
+body {
+    display:flex;
+    flex-direction: column;
+
+    -webkit-transition: ease-out .3s;
+    transition: ease-out .3s;
+
+}
+
+body  * {
+    margin: 1em 0em;
+    -webkit-transition: ease-out .4s;
+    transition: ease-out .4s;
+}
+
+#site-header {
+    padding: 0.5em;
+    margin: 0em auto;
+
+    display:flex;
+    justify-content: space-evenly;
+
+    background-color: rgb(168, 165, 165);
+
+}
+
+
+#main-section {
+    background-color: rgb(240,240,240);
+}
 
 .site-container {
     width: 100%;
     margin: 0 auto;
 
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 65px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* Background of slider */
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+    /* Slider button color*/
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: rgb(5, 5, 5);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+#main-section {
+    flex: 1 0 auto;
 }
 
 #rps-section {
@@ -36,11 +134,11 @@
 }
 
 .rps-button {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 0.1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 0.1em 1em;
 
-    border: 1px solid  rgb(233, 233, 233);
+    border: 1px solid  rgb(75, 75, 75);
     border-radius: 0.25em;
     background-color:rgb(233, 233, 233);
 
@@ -62,7 +160,7 @@
 
 
 #rps-stats {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     background-color:rgb(233, 233, 233);
@@ -90,14 +188,29 @@
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin: 0 auto;
+    margin: 0em auto;
+
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    
+    background-color: rgb(168, 165, 165);
+
 }
 
-
-
 .footer > p {
-    text-align: center;
+}
+
+@media only screen and (min-width: 640px)
+{
+    .site-container {
+        width: 640px;
+    }
+}
+
+@media only screen and (min-width: 740px)
+{
+    .site-container {
+        width: 740px;
+    }
 }
